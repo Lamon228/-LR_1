@@ -1,8 +1,0 @@
-Мій перший репозиторій
-echo "# -LR_1" >> README.md 
-git init 
-git add README.md 
-git commit -m "первая фиксация" 
-git ветка -M main 
-git удаленное добавление источника https://github.com/Lamon228/-LR_1.git
- git push -u режим основной
