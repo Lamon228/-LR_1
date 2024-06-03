@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function sum(arr) {
+            if (!arr || typeof arr !== 'object' || typeof arr.length === 'undefined') {
+                throw new Error("sum(): Provided argument is not an array or array-like object");
+            }
+            
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                const value = arr[i];
+                if (value === null || value === undefined) {
+                    continue; 
+                }
+                if (typeof value !== 'number') {
+                    throw new Error("sum(): arg should be numbers");
+                }
+                total += value;
+            }
+            return total;
+        }
+
+        var result = sum([1, 2, null, undefined, 3]);
+        alert(result); 
+
+        result = sum({ "0": 5, "1": 10, "2": 15, length: 3 });
+        alert(result); 
+
+        try {
+            result = sum([1, 2, 3, "string"]);
+        } catch (e) {
+            alert(e.message); 
+        }
+    </script>
+</body>
+</html>
